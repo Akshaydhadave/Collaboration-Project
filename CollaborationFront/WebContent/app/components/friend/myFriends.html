@@ -1,0 +1,24 @@
+
+				<h3>Freind Requests Sent</h3>			  
+			   
+			   <div ng-repeat="singleUser in friendCtrl.myFriendlist">
+			   <div class="row">
+			      <div class="col s12 m12">
+			        <div class="card-panel">
+			        	<div class="row">
+			        		<div class="col s3">
+					  		<img ng-src="assets/images/{{singleUser.profile}}" height="150px" />
+					  		</div>
+			  				<div class="col s9">
+					  		<p class="frlistname"><a href="#/frprofile/{{singleUser.userid}}">{{singleUser.fname}} {{singleUser.lname}}</a></p>
+					  		<p class="frliststatus"><span class="frlisthead">Status :</span> Student</p>
+					  		
+					  		</div>
+					  	</div>
+			  		</div>
+			  	</div>
+			  </div>
+		  	
+		  	
+		  
+	

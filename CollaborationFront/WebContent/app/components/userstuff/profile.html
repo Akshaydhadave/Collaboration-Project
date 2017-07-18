@@ -1,0 +1,52 @@
+<div ng-init="userCtrl.fetchUser()">
+	<div class="row">
+		<p>My profile</p>
+		<div class="col s12 m4" >
+			<div class="card darken-3">
+				<div class="card-content">
+				    <span class="card-title logo chngephoto center">Change Profile Picture</span>
+				    <hr>
+				    <div class="row center-align">
+				        <img class="profile-picture" ng-src="assets/images/{{user.profile}}" alt="no pic here!" height="200px">
+				    </div>
+				    <div class="row center-align">
+				
+				        <div class="file-field input-field">
+				            <div class="btn grey">
+				                <span>File</span>
+				                <!-- Here we are going to use our custom directive -->
+				                <input type="file" file-model="userCtrl.picture">
+				            </div>
+				            <div class="file-path-wrapper">
+				                <input class="file-path validate" type="text">
+				            </div>
+				        </div>
+				        <button class="btn grey waves-effect waves-light" ng-click="userCtrl.uploadFile()">Change Picture</button>
+				    </div>
+				</div>
+		    </div>
+		   </div>
+			<!-- End of pic -->
+			<div class="col s12 m8"  style="background-color:cadetblue;">
+		        <div class="card-panel">
+					<p class="nameprofile">{{user.fname}} {{user.lname}}</p>
+					<hr>
+					<p class="profiletext"><span class="profiletag">Email</span> : {{user.email}}</p>
+					<p class="profiletext"><span class="profiletag">Phone</span> : {{user.pno}}</p>
+					<hr>
+					<p class="profiletext"><span class="profiletag">Address</span> : {{user.add1}}, {{user.add2}}, {{user.add3}}, {{user.city}}, {{user.state}}, {{user.pincode}}</p>
+					<hr>
+					
+					<p class="profiletext"><span class="profiletag">Role</span> : {{user.role}}</p>
+				</div>
+			  </div>
+			  <!-- End of details -->
+			  
+		
+	</div>
+	
+
+	<div class="row">
+      	
+	</div>
+</div>

@@ -1,0 +1,73 @@
+@CHARSET "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+/* @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif'); */
+
+body {
+	font-family: 'PT Serif', serif;
+	background-color: aquamarine;
+}
+
+#body {
+	
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+}
+
+.row .col .card-panel .listTitle a {
+	
+	font-family: 'PT Serif', serif;
+	font-weight: bold;
+	font-size: 30px;
+	color: #0D123E;
+	padding: 0;
+	margin: 0;
+}
+
+.row .col .card-panel .listTitle a:hover {
+	
+	text-decoration-line: underline;
+}
+
+.row .col .card-panel .listData {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+	color: #515151;
+	text-align: justify;
+}
+
+.row .col .card-panel .listData a {
+	
+	color: #0D123E;
+	font-weight: bold;
+}
+
+.row .col .card-panel .listData a:hover {
+	
+	text-decoration-line: underline;
+}
+
+/**********************/
+.row .col .card-panel .listUser {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 16px;
+	color: #0D123E;
+	text-transform: uppercase;
+}
+
+.row .col .card-panel .listUser a {
+	font-size: 16px;
+	color: rgb(240,160,0);
+	
+}
+
+.row .col .card-panel .listUser a:hover {
+	text-decoration: underline;
+	color: rgb(26,35,126);
+	
+}
