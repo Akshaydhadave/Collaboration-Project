@@ -8,26 +8,19 @@
 
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-	
-	<link rel="stylesheet" href="assets/css/mystyle.css" >
 	<link rel="stylesheet" href="assets/css/myStyle1.css" >
 	<link rel="stylesheet" href="assets/css/myStyle2.css" >
 	<link rel="stylesheet" href="assets/css/myStyle3.css" >
-	<link rel="stylesheet" href="assets/css/myStyle4.css" >
-	<link rel="stylesheet" href="assets/css/myStyle5.css" >
-	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
-  	<script type="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
 	
+	
+
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
@@ -62,9 +55,6 @@
 <script type="text/javascript" src="app/components/authpages/loginFactory.js"></script>
 <script type="text/javascript" src="app/components/authpages/loginController.js"></script>
 
-<script type="text/javascript" src="app/components/chat/chatFactory.js"></script>
-<script type="text/javascript" src="app/components/chat/chatController.js"></script>
-
 	<script type="text/javascript" src="assets/js/myApp.js"></script>
 
 
@@ -77,8 +67,8 @@
 
 <div id="container">
    <header>
-   		
-   		<div ng-if="!authenticated">
+   
+   <div ng-if="!authenticated">
    			<div class="navbar-fixed">
    				<nav>
 				    <div class="nav-wrapper light-blue darken-3">
@@ -111,7 +101,8 @@
 				<ul id="dropdownJob" class="dropdown-content">
 				  <li><a href="#/job/new">Add new job</a></li>
 				  <li><a href="#/job/list">joblist</a></li>
-				  
+				  <li class="divider"></li>
+				  <li><a href="">three</a></li>
 				</ul>
 				
 				<!-- Dropdown Structure Blog -->
@@ -127,7 +118,8 @@
 				<ul id="dropdownEvent" class="dropdown-content">
 				 <li><a href="#/adminevent/new">Create new event</a></li>
 				 <li><a href="#/adminevent/list">All events</a></li>
-				  
+				  <li class="divider"></li>
+				  <li><a href="#!">three</a></li>
 				</ul>
 				
 				<!-- Dropdown Structure User -->
@@ -137,8 +129,6 @@
 				  <li class="divider"></li>
 				  <li><a href="#/user/nalist">Approve users</a></li>
 				  <li><a href="#/user/changeRole">Change role</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#/user/rejectedlist">Rejected users list</a></li>
 				  
 				</ul>
 				
@@ -176,20 +166,6 @@
 				  <li><a href="#/blog/userbloglist">My blogs</a></li>
 				</ul>
 				
-				<!-- Dropdown Structure User Job -->
-				<ul id="dropdownUserJob" class="dropdown-content">
-				  <li><a href="#/job/list">All Jobs</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#/job/appliedlist">Applied Jobs</a></li>
-				</ul>
-				
-				<!-- Dropdown Structure User Event -->
-				<ul id="dropdownUserEvent" class="dropdown-content">
-				  <li><a href="#/adminevent/list">All Events</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#/event/participatedList">Participated Events</a></li>
-				</ul>
-				
 				<!-- Dropdown Structure user Friend -->
 				<ul id="dropdownUserFriend" class="dropdown-content">
 			     <li><a href="#/friend/myfrlist">My friends</a></li>
@@ -202,8 +178,8 @@
 				</ul>
 				
 				<nav>
-				<div class="nav-wrapper orange darken-3">
-					<a href="#/profile/{{user.userid}}" class="brand-logo nextlogo">NEXTHUB</a>
+				<div class="nav-wrapper light-blue darken-3">
+					<a href="#/profile/{{user.userid}}" class="brand-logo">Hexaware</a>
 				 	
 
 				 	
@@ -218,32 +194,25 @@
       <li><a class="dropdown-UserForum" href="" data-activates="dropdownUserForum">Forum<i class="material-icons right">arrow_drop_down</i></a></li>
     
 				 			<!-- Dropdown Trigger user x User -->
-      <!-- <li><a class="dropdown-Useruser" href="" data-activates="dropdownUseruser">User<i class="material-icons right">arrow_drop_down</i></a></li>
-     -->
+      <li><a class="dropdown-Useruser" href="" data-activates="dropdownUseruser">User<i class="material-icons right">arrow_drop_down</i></a></li>
+    
 				 			<!-- Dropdown Trigger user Blog -->
       <li><a class="dropdown-UserBlog" href="" data-activates="dropdownUserBlog">Blog<i class="material-icons right">arrow_drop_down</i></a></li>
     
 				 			
-				 			<!-- Dropdown Trigger user Job -->
-      <li><a class="dropdown-UserJob" href="" data-activates="dropdownUserJob">Jobs<i class="material-icons right">arrow_drop_down</i></a></li>
-    
-    						<!-- Dropdown Trigger user Events -->
-      <li><a class="dropdown-UserEvent" href="" data-activates="dropdownUserEvent">Events<i class="material-icons right">arrow_drop_down</i></a></li>
-    
+				 			
 				 			
 				 			
 							
 							<!-- <li><a href="#/user/new">Register</a></li> -->
 							
-							<!-- <li><a href="#/adminevent/list">Events list</a></li>
-							<li><a href="#/job/list">Jobs list</a></li> -->
+							<li><a href="#/adminevent/list">Events list</a></li>
+							<li><a href="#/job/list">Jobs list</a></li>
 							<li><a href="#!"ng-click="logout()">Log Out</a></li>
 							
 				 		</ul>
 				 		
 				 		<ul class="right hide-on-med-and-down" ng-if="user.role == 'Admin'">
-				 			
-				 			<li><a href="#/profile/{{user.userid}}">Profile</a></li>
 				 			
 				 			<!-- Dropdown Trigger friend -->
       <li><a class="dropdown-friend" href="" data-activates="dropdownFriend">Friend<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -275,12 +244,12 @@
 		</div>		<!-- End of navbar fixed -->
 		</div>		<!-- End of if auth -->
    	</header>
-   <div id="body" ng-cloak class="ng-cloak">
+   <div id="body" ng-cloak>
    
    
    
    
-   
+<!--    Hello world -->
    
    <div ng-view>
 
@@ -289,13 +258,14 @@
    
    </div>
    
-   <div id="footer">
+   
+       <div id="footer">
         <footer class="page-footer light-blue darken-3" >
           <div class="container" ng-if="authenticated">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <p class="grey-text text-lighten-4"></p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
@@ -310,13 +280,18 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            Copyright &copy; NEXTHUB 2017
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+            Copyright &copy; Hexaware 2017
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
         </footer>
             
-   </div>
+   </div> 
+   
+</div>
+
+            
+   
    
 </div>
 
